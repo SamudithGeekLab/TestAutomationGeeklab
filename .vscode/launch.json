@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Run Robot Framework",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "robot",
+            "args": [
+                "--report",
+                "${workspaceFolder}/Results/report-${currentDate}.html",
+                "--log",
+                "${workspaceFolder}/Results/log-${currentDate}.html",
+                "--output",
+                "${workspaceFolder}/Results/output-${currentDate}.xml",
+                "${file}"
+            ],
+            "env": {
+                "currentDate": "${date:yyyyMMdd-HHmmss}"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}

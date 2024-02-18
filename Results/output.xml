@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.5 on darwin)" generated="2024-02-18T10:22:10.359974" rpa="false" schemaversion="5">
+<suite id="s1" name="VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp">
+<suite id="s1-s1" name="VerifyUserLogin" source="/Users/samudith/Documents/Geeklab-TestAutomation/Test/VerifyUserLogin.robot">
+<test id="s1-s1-t1" name="Verify the Geeklab login and navigate to the dashboard" line="18">
+<kw name="Start TestCase" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:10.445723" level="INFO">Opening browser 'Chrome' to base url 'https://dev.geeklab.app/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-18T10:22:10.445626" elapsed="4.030936"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-18T10:22:14.477092" elapsed="0.425479"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:10.445318" elapsed="4.457398"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:14.903626" level="INFO">Typing text 'samudith@geeklab.app' into text field '//input[@id='react-aria-1']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:14.902989" elapsed="0.126975"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:15.030375" level="INFO">Typing text 'Geek@12345' into text field '//input[@id='react-aria-3']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:15.030157" elapsed="0.052011"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:15.082511" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:15.082367" elapsed="0.039531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:20.124835" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:15.122090" elapsed="5.003186"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:20.132954" level="INFO">${current_url} = https://dev.geeklab.app/dashboard</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-02-18T10:22:20.126248" elapsed="0.006776"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${EXPECTED_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-18T10:22:20.133408" elapsed="0.000438"/>
+</kw>
+<kw name="Tear Down" owner="Common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-18T10:22:20.134809" elapsed="0.085993"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:20.134296" elapsed="0.086598"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:10.445099" elapsed="9.775949"/>
+</test>
+<doc>This is a simple test suite for the Geeklab login page</doc>
+<status status="PASS" start="2024-02-18T10:22:10.369158" elapsed="9.852244"/>
+</suite>
+<suite id="s1-s2" name="VerifyUserLoginIncorrectCredentials" source="/Users/samudith/Documents/Geeklab-TestAutomation/Test/VerifyUserLoginIncorrectCredentials.robot">
+<test id="s1-s2-t1" name="Verify the Geeklab login error message with invalid credentials" line="20">
+<kw name="Start TestCase" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:20.224347" level="INFO">Opening browser 'Chrome' to base url 'https://dev.geeklab.app/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-18T10:22:20.224199" elapsed="3.274570"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-18T10:22:23.499037" elapsed="0.433165"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:20.224009" elapsed="3.708331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:23.932896" level="INFO">Typing text 'samudith@geeklab.app' into text field '//input[@id='react-aria-1']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:23.932570" elapsed="0.125509"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:24.058390" level="INFO">Typing text 'Geeklab@12345' into text field '//input[@id='react-aria-3']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:24.058232" elapsed="0.045326"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:24.103873" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:24.103740" elapsed="0.037702"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:29.142527" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:24.141601" elapsed="5.001072"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:29.166038" level="INFO">${error_message} = Invalid credentials</msg>
+<var>${error_message}</var>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:29.143003" elapsed="0.023070"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-18T10:22:29.166439" level="INFO">Error Message: Invalid credentials</msg>
+<arg>Error Message: ${error_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-18T10:22:29.166285" elapsed="0.000184"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_message}</arg>
+<arg>${EXPECTED_ERROR}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-18T10:22:29.166568" elapsed="0.000140"/>
+</kw>
+<kw name="Tear Down" owner="Common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-18T10:22:29.167070" elapsed="0.080071"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:29.166869" elapsed="0.080358"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:20.223737" elapsed="9.023634"/>
+</test>
+<doc>This is a simple test suite for the Geeklab login page invalid credential error message validation</doc>
+<status status="PASS" start="2024-02-18T10:22:20.221783" elapsed="9.025847"/>
+</suite>
+<suite id="s1-s3" name="VerifyCreateCampaignLiveApp" source="/Users/samudith/Documents/Geeklab-TestAutomation/Test/VerifyCreateCampaignLiveApp.robot">
+<test id="s1-s3-t1" name="Verify the functionality to create a new campaign using LIVE app in Google Play Store" line="46">
+<kw name="Start TestCase" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:29.250209" level="INFO">Opening browser 'Chrome' to base url 'https://dev.geeklab.app/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-18T10:22:29.250087" elapsed="3.418677"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-18T10:22:32.671664" elapsed="0.425199"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:29.249933" elapsed="3.847061"/>
+</kw>
+<kw name="login to Dashboard">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:33.097822" level="INFO">Typing text 'samudith@geeklab.app' into text field '//input[@id='react-aria-1']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:33.097580" elapsed="0.118417"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:33.216272" level="INFO">Typing text 'Geek@12345' into text field '//input[@id='react-aria-3']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:33.216105" elapsed="0.042619"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:33.258954" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:33.258841" elapsed="0.037385"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:38.297137" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:33.296350" elapsed="5.001169"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:38.304943" level="INFO">${current_url} = https://dev.geeklab.app/dashboard</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.298148" elapsed="0.006852"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${EXPECTED_URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.305243" elapsed="0.000349"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:33.097307" elapsed="5.208419"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NEW_CAMPAIGN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.305981" elapsed="0.024021"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:38.341975" level="INFO">Element '//b[@class='nextui-c-PJLV nextui-c-PJLV-ijnlmIz-css z-1 relative mr-auto p-4 !text-white']' is displayed.</msg>
+<arg>${NEW_CAMPAIGN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.330247" elapsed="0.011792"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:38.342311" level="INFO">Clicking element '//b[@class='nextui-c-PJLV nextui-c-PJLV-ijnlmIz-css z-1 relative mr-auto p-4 !text-white']'.</msg>
+<arg>${NEW_CAMPAIGN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.342182" elapsed="0.075012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:41.419558" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:38.417348" elapsed="3.002346"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPAIGN_LABELTEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.419992" elapsed="0.014971"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:41.445757" level="INFO">${current_labelText} = CREATE A NEW CAMPAIGN</msg>
+<var>${current_labelText}</var>
+<arg>${CAMPAIGN_LABELTEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.435116" elapsed="0.010663"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_labelText}</arg>
+<arg>CREATE A NEW CAMPAIGN</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.445882" elapsed="0.000111"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-18T10:22:41.446174" level="INFO">Current label text: CREATE A NEW CAMPAIGN</msg>
+<arg>Current label text: ${current_labelText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.446105" elapsed="0.000087"/>
+</kw>
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<arg>${CREATE_DRAFT}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.446254" elapsed="0.007996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:41.454430" level="INFO">Clicking element '//*[contains(@class,'svg-inline--fa fa-angle-down fa-lg')]'.</msg>
+<arg>${SELECT_APP_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.454334" elapsed="0.037014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:44.493543" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:41.491514" elapsed="3.002451"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_NEW}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:44.494798" elapsed="0.022397"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:44.517787" level="INFO">Clicking element '//div[contains(text(),'Add new')]'.</msg>
+<arg>${ADD_NEW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:44.517501" elapsed="0.044467"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_NEW_APP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:44.562169" elapsed="0.237883"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:46.802789" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:44.800272" elapsed="2.002943"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${APPSTORE_DROPDOWN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-18T10:22:46.804168" elapsed="0.283063"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${APPSTORE_DROPDOWN}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:47.087976" elapsed="0.017020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:22:52.107231" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:47.105333" elapsed="5.002308"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:52.109362" level="INFO">Clicking element '//input[contains(@placeholder,'URL')]/parent::label/parent::div/parent::div/parent::div/following-sibling::div//p[contains(text(),'App')]/parent::div/preceding-sibling::span/parent::button'.</msg>
+<arg>${APPSTORE_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.108466" elapsed="0.080837"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PLAYSTORE_SELECTION}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.189544" elapsed="0.230265"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:52.420331" level="INFO">Clicking element '//span[contains(text(),'Play')]'.</msg>
+<arg>${PLAYSTORE_SELECTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.420085" elapsed="0.059946"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:52.480384" level="INFO">Typing text 'asphault 9' into text field '//span[contains(text(),'App')]/following-sibling::input'.</msg>
+<arg>${APPNAME_SEARCH}</arg>
+<arg>asphault 9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.480216" elapsed="0.079829"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:52.560862" level="INFO">Clicking element '//span[contains(text(),'search')]'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.560544" elapsed="0.028547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${APP_RELATED_SELECT}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:22:52.589267" elapsed="1.056950"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:22:53.646534" level="INFO">Clicking button '//p[contains(text(),'Asphalt 9')]/parent::div/following-sibling::button'.</msg>
+<arg>${APP_RELATED_SELECT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:22:53.646381" elapsed="0.041202"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:23:03.688867" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:22:53.687726" elapsed="10.001634"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DRAFT_BUTTON}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:23:03.690226" elapsed="0.019172"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${DRAFT_BUTTON}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-18T10:23:03.709743" elapsed="0.013167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:23:03.723214" level="INFO">Clicking element '//span[contains(text(),'Create draft')]/parent::button'.</msg>
+<arg>${DRAFT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:23:03.723065" elapsed="0.038719"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PP_PROJECT}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:23:03.761980" elapsed="0.786323"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PP_SUBMIT}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:23:04.548466" elapsed="0.009721"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:23:09.560305" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:23:04.558318" elapsed="5.002318"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:23:09.561951" level="INFO">Clicking button '//button[contains(text(),'Submit')]'.</msg>
+<arg>${PP_SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:23:09.561285" elapsed="0.048089"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONFIRM_SUBMIT}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:23:09.609554" elapsed="0.221552"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-18T10:23:11.832918" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-18T10:23:09.831267" elapsed="2.002070"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-18T10:23:11.835042" level="INFO">Clicking element '//span[contains(text(),'Submit')]'.</msg>
+<arg>${CONFIRM_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-18T10:23:11.834168" elapsed="0.106607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPAIGN_LIVE}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-18T10:23:11.940996" elapsed="0.486109"/>
+</kw>
+<kw name="Tear Down" owner="Common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-18T10:23:12.427442" elapsed="0.089004"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:23:12.427292" elapsed="0.089223"/>
+</kw>
+<status status="PASS" start="2024-02-18T10:22:29.249691" elapsed="43.266928"/>
+</test>
+<doc>This is a simple test suite to create campaign using LIVE app</doc>
+<status status="PASS" start="2024-02-18T10:22:29.247982" elapsed="43.268812"/>
+</suite>
+<status status="PASS" start="2024-02-18T10:22:10.360786" elapsed="62.156279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp">VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="VerifyUserLogin">VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp.VerifyUserLogin</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="VerifyUserLoginIncorrectCredentials">VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp.VerifyUserLoginIncorrectCredentials</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="VerifyCreateCampaignLiveApp">VerifyUserLogin &amp; VerifyUserLoginIncorrectCredentials &amp; VerifyCreateCampaignLiveApp.VerifyCreateCampaignLiveApp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
